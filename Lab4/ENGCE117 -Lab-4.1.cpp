@@ -12,4 +12,4 @@ int main() {
     printf( "%d %p %p\n", *a, a, &a ) ;
 
     return 0 ;
-}//end function
+}

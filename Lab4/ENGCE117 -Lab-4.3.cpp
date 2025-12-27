@@ -49,4 +49,4 @@ void SaveNode( struct studentNode *child, char n[], int a, char s, float g ) {
     child->sex = s ;
     child->gpa = g ;
     child->next = NULL ;
-}//end fuction
+}

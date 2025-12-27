@@ -16,4 +16,4 @@ int main() {
     printf( "Input=>%d %p %p %p\n", **a, *a, a, &a ) ;
 
     return 0 ;
-}//end function
+}

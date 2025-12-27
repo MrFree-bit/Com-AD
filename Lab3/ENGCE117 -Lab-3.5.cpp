@@ -7,6 +7,21 @@ struct student {
     float gpa;
 };
 
+struct student (*GetStudent(int *room))[10];
+
+int main() {
+    struct student (*children)[10];
+    int group;
+    children = GetStudent(&group);
+
+    if (group > 0) {
+        printf("\n--- Verification ---\n");
+        printf("First student in first room: %s\n", children[0][0].name);
+        printf("Total rooms recorded: %d\n", group);
+    }
+return 0;
+}
+
 struct student (*GetStudent(int *room))[10] {
     static struct student child[100][10];
     printf("Enter number of classrooms: ");
@@ -28,16 +43,3 @@ struct student (*GetStudent(int *room))[10] {
     }
     return child;
 }
-
-int main() {
-    struct student (*children)[10];
-    int group;
-    children = GetStudent(&group);
-
-    if (group > 0) {
-        printf("\n--- Verification ---\n");
-        printf("First student in first room: %s\n", children[0][0].name);
-        printf("Total rooms recorded: %d\n", group);
-    }
-return 0;
-}//end function

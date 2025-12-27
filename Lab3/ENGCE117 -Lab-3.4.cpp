@@ -7,6 +7,17 @@ struct student {
     float gpa ;
 } ;
 
+void GetStudent(struct student child[][10], int *room);
+
+int main() {
+    struct student children[20][10] ;
+    int group ;
+
+    GetStudent( children, &group ) ;
+    printf( "\nTotal classrooms recorded: %d\n", group );
+    return 0 ;
+}
+
 void GetStudent(struct student child[][10], int *room) {
     printf( "Enter number of classrooms: " ) ;
     scanf( "%d", room ) ;
@@ -25,12 +36,3 @@ void GetStudent(struct student child[][10], int *room) {
         }
     }
 }
-
-int main() {
-    struct student children[20][10] ;
-    int group ;
-
-    GetStudent( children, &group ) ;
-    printf( "\nTotal classrooms recorded: %d\n", group );
-    return 0 ;
-}//end function
